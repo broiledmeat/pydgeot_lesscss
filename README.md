@@ -14,7 +14,8 @@ python setup.py install
 ```
 
 ### Configuration
-Add `lesscss` to your pydgeot.conf `plugins` list. Options are placed under a `lesscss` key.
+Add `lesscss` to your pydgeot.conf `plugins` list to enable the plugin. Then add `lesscss` to the `processors` list in
+pydgeot.conf, or nested .pydgeot.conf's, to use the file processor. Options are placed under a `lesscss` key.
 - `source_ext` Extension of source files to build. _Default: .css_
 - `build_ext` Extension of built files. _Default: .css_
 - `minify` Minify built files. _Default: false_
@@ -31,4 +32,4 @@ Add `lesscss` to your pydgeot.conf `plugins` list. Options are placed under a `l
 ```
 
 ### Usage
-The LessCSS plugin will process any `.css` file as a LessCSS template.
+The LessCSS plugin will process any `.css` (or extension specified by `source_ext`) file as a LessCSS template.
